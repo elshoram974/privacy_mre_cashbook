@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root" dir="auto">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - MRE CashBook</title>
+    <style>
+        /* الوان التطبيق - اللايت مود (افتراضي للويب) */
+        :root {
+            --bg-color: transparent;
+            --text-color: #2D2F33;
+            --p-color: #55575A;
+            --heading-color: #005F73;
+            --border-color: #2A9D8F;
+            --highlight-bg: #E8F5E9;
+            --highlight-text: #005F73;
+            --highlight-border: #E76F51;
+            --btn-bg: #005F73;
+            --btn-text: #ffffff;
+            --btn-email-bg: #2A9D8F;
+            --toggle-bg: #F8F9FA;
+            --toggle-text: #005F73;
+        }
+
+        /* الوان التطبيق - الدارك مود (يعمل داخل التطبيق فقط) */
+        [data-theme="dark"] {
+            --bg-color: transparent;
+            --text-color: #FFFFFF;
+            --p-color: #B3B3B3;
+            --heading-color: #0A9396;
+            --border-color: #3EC9B8;
+            --highlight-bg: rgba(62, 201, 184, 0.1);
+            --highlight-text: #3EC9B8;
+            --highlight-border: #F28B70;
+            --btn-bg: #0A9396;
+            --btn-text: #ffffff;
+            --btn-email-bg: #3EC9B8;
+            --toggle-bg: #1E1E2C;
+            --toggle-text: #0A9396;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 15px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            h1 { font-size: 22px; }
+            h2 { font-size: 18px; }
+            p, li { font-size: 14px; }
+        }
+
+        h1,
+        h2 {
+            color: var(--heading-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 20px;
+        }
+
+        p,
+        li {
+            font-size: 15px;
+            color: var(--p-color);
+        }
+
+        .highlight {
+            background-color: var(--highlight-bg);
+            padding: 15px;
+            border-left: 4px solid var(--highlight-border);
+            border-radius: 8px;
+            font-weight: bold;
+            color: var(--highlight-text);
+            transition: all 0.3s;
+        }
+
+        /* ضبط الحواف الملونة لاتجاه النصوص من اليمين لليسار */
+        [dir="rtl"] .highlight {
+            border-left: none;
+            border-right: 4px solid var(--highlight-border);
+        }
+
+        .contact-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background-color: var(--btn-bg);
+            color: var(--btn-text) !important;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: opacity 0.3s, transform 0.2s;
+        }
+
+        .contact-btn.email {
+            background-color: var(--btn-email-bg);
+            color: var(--btn-text) !important;
+        }
+
+        .contact-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* تصميم القائمة المنسدلة لاختيار اللغة */
+        .top-controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        .lang-select {
+            background-color: var(--toggle-bg);
+            color: var(--toggle-text);
+            border: 1px solid var(--border-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            outline: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .lang-select:focus {
+            border-color: var(--highlight-border);
+        }
+
+        /* اخفاء جميع الاقسام افتراضيا */
+        .lang-section {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-controls" id="top-controls">
+        <select class="lang-select" id="lang-select" onchange="changeLang(this.value)">
+            <option value="ar">العربية</option>
+            <option value="de">Deutsch</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="hi">हिन्दी</option>
+            <option value="ru">Русский</option>
+            <option value="tr">Türkçe</option>
+            <option value="zh">中文</option>
+        </select>
+    </div>
+
+    <div id="section-ar" class="lang-section" style="direction: rtl; text-align: right;">
+        <h1>سياسة الخصوصية لتطبيق MRE CashBook</h1>
+        <p><strong>آخر تحديث:</strong> مارس 2026</p>
+        <p>تم تطوير تطبيق <strong>MRE CashBook</strong> بواسطة <strong>MRE Code</strong>. التطبيق مصمم ليكون أداة شخصية
+            (دفتر ملاحظات/سجل رقمي) لمساعدة المستخدمين على تسجيل حركاتهم اليومية يدويا. <strong>نحن لسنا بنكا أو جهة
+                مالية أو خدمة استشارية.</strong></p>
+        <div class="highlight">نحن لا نقوم بجمع أو إرسال أو تخزين أي من سجلاتك المالية أو الشخصية. بيانات دفترك تبقى
+            بنسبة 100% على جهازك فقط.</div>
+
+        <h2>1. جمع البيانات</h2>
+        <p>نحن لا نطلب منك إنشاء حساب. كل السجلات المالية التي تقوم بإدخالها تحفظ حصريا في مساحة التخزين المحلية لهاتفك
+            ولا يتم رفعها إلى خوادمنا أبدا.</p>
+
+        <h2>2. الصلاحيات المطلوبة واستخدامها</h2>
+        <ul>
+            <li><strong>التخزين والملفات:</strong> تستخدم فقط لتصدير تقارير PDF ولحفظ أو استعادة ملفات النسخ الاحتياطي
+                (.mrecb) في مجلد التنزيلات بجهازك.</li>
+            <li><strong>البصمة (Biometrics):</strong> تستخدم محليا عبر نظام تشغيل هاتفك لقفل التطبيق وتأكيد عمليات النسخ
+                الاحتياطي. نحن لا نصل إلى بيانات بصمتك بأي شكل.</li>
+            <li><strong>جهات الاتصال (Contacts):</strong> إذا استخدمت حقل "جهة الاتصال"، يطلب التطبيق إذن الوصول لجهات
+                اتصالك فقط لتسهيل اختيار الاسم بدلا من كتابته يدويا. تتم هذه العملية محليا ولا يتم رفع أي أرقام لأي
+                خوادم خارجية.</li>
+        </ul>
+
+        <h2>3. خدمات الطرف الثالث والتشخيص</h2>
+        <p>لضمان استقرار التطبيق وإرسال الإشعارات الضرورية، نستخدم خدمات Firebase (مثل Crashlytics و Cloud Messaging).
+            تقوم هذه الخدمات بجمع بيانات تشخيصية وسجلات أعطال ومعرفات أجهزة بشكل آلي ومجهول المصدر. تستخدم هذه البيانات
+            حصريا لتحسين أداء التطبيق ولا يتم ربطها أبدا بهويتك الشخصية أو سجلاتك المالية.</p>
+
+        <h2>4. الأمان والنسخ الاحتياطي</h2>
+        <p>نظرا لأن بياناتك غير متصلة بالإنترنت، فأنت المسؤول الوحيد عن حفظ ملفات النسخ الاحتياطي الخاصة بك في مكان آمن.
+            إذا قمت بحذف التطبيق دون أخذ نسخة احتياطية، فستفقد بياناتك نهائيا ولا يمكننا استعادتها لك.</p>
+        <div class="contact-group">
+            <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">تواصل معي عبر واتساب</a>
+            <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">راسلني عبر الإيميل</a>
+        </div>
+    </div>
+
+    <div id="section-de" class="lang-section">
+        <h1>Datenschutzrichtlinie für MRE CashBook</h1>
+        <p><strong>Zuletzt aktualisiert:</strong> März 2026</p>
+        <p><strong>MRE Code</strong> hat die <strong>MRE CashBook</strong>-App entwickelt. Sie ist ausschließlich als
+            persönliches Hilfsmittel (ein digitales Notizbuch/Hauptbuch) gedacht, um Nutzern zu helfen, ihre
+            persönlichen Einträge manuell zu erfassen und zu verfolgen. <strong>Wir sind KEINE Bank, kein Finanzinstitut
+                und kein Beratungsdienst.</strong></p>
+        <div class="highlight">Wir sammeln, übertragen, speichern oder teilen KEINE Ihrer finanziellen oder persönlichen
+            Aufzeichnungen. Ihre Hauptbuchdaten verbleiben zu 100% lokal auf Ihrem Gerät.</div>
+
+        <h2>1. Datenerhebung</h2>
+        <p>Wir verlangen von Ihnen keine Kontoerstellung. Ihre Finanzdaten werden ausschließlich im lokalen Speicher
+            Ihres Geräts gespeichert und niemals auf unsere Server hochgeladen.</p>
+
+        <h2>2. Erforderliche Berechtigungen & Nutzung</h2>
+        <ul>
+            <li><strong>Speicher / Dateien:</strong> Strengstens verwendet, um Ihre PDF-Berichte zu exportieren und Ihre
+                Datenbank-Backups (.mrecb-Dateien) in Ihrem lokalen Downloads-Ordner zu speichern oder
+                wiederherzustellen.</li>
+            <li><strong>Biometrie (FaceID/TouchID):</strong> Wird lokal vom Betriebssystem Ihres Geräts für die
+                Funktionen „App-Sperre“ und Backup-Autorisierung verwendet. Wir haben keinen Zugriff auf Ihre
+                biometrischen Daten und speichern diese nicht.</li>
+            <li><strong>Kontakte:</strong> Wenn Sie das benutzerdefinierte Feld „Kontakt“ verwenden, fordert die App
+                Zugriff auf Ihr Telefonbuch an, ausschließlich damit Sie schnell einen Namen auswählen können. Diese
+                Daten werden lokal verarbeitet und NIEMALS auf einen Server hochgeladen.</li>
+        </ul>
+
+        <h2>3. Drittanbieter-Dienste & Diagnose</h2>
+        <p>Um die Stabilität der App zu gewährleisten und wichtige Benachrichtigungen bereitzustellen, verwenden wir
+            Firebase (Crashlytics und Cloud Messaging). Diese Dienste erfassen automatisch anonyme Diagnosedaten,
+            Absturzprotokolle und Geräte-IDs. Diese Daten werden ausschließlich für die App-Funktionalität und Analysen
+            verwendet und sind niemals mit Ihrer persönlichen Identität oder Ihren Finanzdaten verknüpft.</p>
+
+        <h2>4. Backups & Sicherheit</h2>
+        <p>Da Ihre Finanzdaten offline sind, sind Sie allein dafür verantwortlich, Ihre exportierten Backup-Dateien
+            sicher aufzubewahren. Wenn Sie die App löschen oder Ihr Telefon ohne Backup verlieren, gehen Ihre Daten
+            dauerhaft verloren. Wir können sie nicht für Sie wiederherstellen.</p>
+        <div class="contact-group">
+            <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">WhatsApp Me</a>
+            <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">Email Me</a>
+        </div>
+    </div>
+
+    <div id="section-en" class="lang-section">
+        <h1>Privacy Policy for MRE CashBook</h1>
+        <p><strong>Last Updated:</strong> March 2026</p>
+        <p><strong>MRE Code</strong> built the <strong>MRE CashBook</strong> app. It is designed solely as a personal
+            utility tool (a digital notebook/ledger) to help users manually record and track their personal entries.
+            <strong>We are NOT a bank, financial institution, or advisory service.</strong></p>
+        <div class="highlight">We do NOT collect, transmit, store, or share ANY of your financial or personal records.
+            Your ledger data stays 100% locally on your device.</div>
+
+        <h2>1. Data Collection</h2>
+        <p>We do not require you to create an account. Your financial records are saved exclusively in your device's
+            local storage and are never uploaded to our servers.</p>
+
+        <h2>2. Required Permissions & Usage</h2>
+        <ul>
+            <li><strong>Storage / Files:</strong> Strictly used to export your PDF reports and to save or restore your
+                database backups (.mrecb files) to your local Downloads folder.</li>
+            <li><strong>Biometrics (FaceID/TouchID):</strong> Used locally by your device's OS for the "App Lock" and
+                backup authorization features. We do not access or store your biometric data.</li>
+            <li><strong>Contacts:</strong> If you use the custom "Contact" field, the app requests access to your
+                phonebook solely to let you quickly pick a name. This data is processed locally and is NEVER uploaded to
+                any server.</li>
+        </ul>
+
+        <h2>3. Third-Party Services & Diagnostics</h2>
+        <p>To ensure app stability and deliver essential notifications, we use Firebase (Crashlytics and Cloud
+            Messaging). These services automatically collect anonymous diagnostic data, crash logs, and device
+            identifiers. This data is strictly used for app functionality and analytics, and is <strong>never</strong>
+            linked to your personal identity or financial data.</p>
+
+        <h2>4. Backups & Security</h2>
+        <p>Because your financial data is offline, you are entirely responsible for keeping your exported backup files
+            safe. If you delete the app or lose your phone without a backup, your data is permanently lost. We cannot
+            recover it for you.</p>
+        <div class="contact-group">
+            <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">WhatsApp Me</a>
+            <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">Email Me</a>
+        </div>
+    </div>
+
+    <div id="section-es" class="lang-section">
+        <h1>Política de Privacidad de MRE CashBook</h1>
+        <p><strong>Última actualización:</strong> Marzo de 2026</p>
+        <p><strong>MRE Code</strong> creó la aplicación <strong>MRE CashBook</strong>. Está diseñada únicamente como una
+            herramienta de utilidad personal (un cuaderno/libro de contabilidad digital) para ayudar a los usuarios a
+            registrar y realizar un seguimiento manual de sus entradas personales. <strong>NO somos un banco, una
+                institución financiera ni un servicio de asesoría.</strong></p>
+        <div class="highlight">NO recopilamos, transmitimos, almacenamos ni compartimos NINGUNO de sus registros
+            financieros o personales. Los datos de su libro de contabilidad permanecen 100% localmente en su
+            dispositivo.</div>
+
+        <h2>1. Recopilación de datos</h2>
+        <p>No requerimos que cree una cuenta. Sus registros financieros se guardan exclusivamente en el almacenamiento
+            local de su dispositivo y nunca se cargan a nuestros servidores.</p>
+
+        <h2>2. Permisos requeridos y uso</h2>
+        <ul>
+            <li><strong>Almacenamiento / Archivos:</strong> Se utiliza estrictamente para exportar sus informes en PDF y
+                para guardar o restaurar sus copias de seguridad de la base de datos (archivos .mrecb) en su carpeta
+                local de Descargas.</li>
+            <li><strong>Biometría (FaceID/TouchID):</strong> Utilizado localmente por el sistema operativo de su
+                dispositivo para las funciones de "Bloqueo de aplicación" y autorización de copia de seguridad. No
+                accedemos ni almacenamos sus datos biométricos.</li>
+            <li><strong>Contactos:</strong> Si utiliza el campo personalizado "Contacto", la aplicación solicita acceso
+                a su agenda telefónica únicamente para permitirle elegir un nombre rápidamente. Estos datos se procesan
+                localmente y NUNCA se cargan a ningún servidor.</li>
+        </ul>
+
+        <h2>3. Servicios de terceros y diagnóstico</h2>
+        <p>Para garantizar la estabilidad de la aplicación y enviar notificaciones esenciales, utilizamos Firebase
+            (Crashlytics y Cloud Messaging). Estos servicios recopilan automáticamente datos de diagnóstico anónimos,
+            registros de fallos e identificadores de dispositivos. Estos datos se utilizan estrictamente para el
+            funcionamiento y análisis de la aplicación, y nunca se vinculan con su identidad personal o datos
+            financieros.</p>
+
+        <h2>4. Copias de seguridad y seguridad</h2>
+        <p>Debido a que sus datos financieros están fuera de línea, usted es el único responsable de mantener a salvo
+            sus archivos de copia de seguridad exportados. Si elimina la aplicación o pierde su teléfono sin una copia
+            de seguridad, sus datos se perderán permanentemente. No podemos recuperarlos por usted.</p>
+        <div class="contact-group">
+            <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">WhatsApp Me</a>
+            <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">Email Me</a>
+        </div>
+    </div>
+
+    <div id="section-fr" class="lang-section">
+        <h1>Politique de confidentialité de MRE CashBook</h1>
+        <p><strong>Dernière mise à jour:</strong> Mars 2026</p>
+        <p><strong>MRE Code</strong> a développé l'application <strong>MRE CashBook</strong>. Elle est conçue uniquement
+            comme un outil utilitaire personnel (un carnet/grand livre numérique) pour aider les utilisateurs à
+            enregistrer et à suivre manuellement leurs entrées personnelles. <strong>Nous ne sommes PAS une banque, une
+                institution financière ou un service de conseil.</strong></p>
+        <div class="highlight">Nous ne collectons, ne transmettons, ne stockons et ne partageons AUCUN de vos
+            enregistrements financiers ou personnels. Les données de votre grand livre restent à 100% localement sur
+            votre appareil.</div>
+
+        <h2>1. Collecte de données</h2>
+        <p>Nous ne vous demandons pas de créer un compte. Vos enregistrements financiers sont sauvegardés exclusivement
+            dans le stockage local de votre appareil et ne sont jamais téléchargés sur nos serveurs.</p>
+
+        <h2>2. Autorisations requises et utilisation</h2>
+        <ul>
+            <li><strong>Stockage / Fichiers:</strong> Strictement utilisé pour exporter vos rapports PDF et pour
+                sauvegarder ou restaurer vos sauvegardes de base de données (fichiers .mrecb) dans votre dossier
+                Téléchargements local.</li>
+            <li><strong>Biométrie (FaceID/TouchID):</strong> Utilisé localement par le système d'exploitation de votre
+                appareil pour les fonctionnalités de « Verrouillage de l'application » et d'autorisation de sauvegarde.
+                Nous n'accédons ni ne stockons vos données biométriques.</li>
+            <li><strong>Contacts:</strong> Si vous utilisez le champ personnalisé « Contact », l'application demande
+                l'accès à votre répertoire uniquement pour vous permettre de choisir rapidement un nom. Ces données sont
+                traitées localement et ne sont JAMAIS téléchargées sur un serveur.</li>
+        </ul>
+
+        <h2>3. Services tiers et diagnostics</h2>
+        <p>Pour garantir la stabilité de l'application et fournir des notifications essentielles, nous utilisons
+            Firebase (Crashlytics et Cloud Messaging). Ces services collectent automatiquement des données de diagnostic
+            anonymes, des journaux de plantage et des identifiants d'appareils. Ces données sont strictement utilisées
+            pour le fonctionnement et l'analyse de l'application, et ne sont jamais liées à votre identité personnelle
+            ou à vos données financières.</p>
+
+        <h2>4. Sauvegardes et sécurité</h2>
+        <p>Étant donné que vos données financières sont hors ligne, vous êtes entièrement responsable de la sécurité de
+            vos fichiers de sauvegarde exportés. Si vous supprimez l'application ou perdez votre téléphone sans
+            sauvegarde, vos données sont définitivement perdues. Nous ne pouvons pas les récupérer pour vous.</p>
+        <div class="contact-group">
+            <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">WhatsApp Me</a>
+            <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">Email Me</a>
+        </div>
+    </div>
+
+    <div id="section-hi" class="lang-section">
+        <h1>MRE CashBook के लिए गोपनीयता नीति</h1>
+        <p><strong>अंतिम अपडेट:</strong> मार्च 2026</p>
+        <p><strong>MRE Code</strong> ने <strong>MRE CashBook</strong> ऐप बनाया है। यह पूरी तरह से एक व्यक्तिगत उपयोगिता
+            उपकरण (एक डिजिटल नोटबुक/बहीखाता) के रूप में डिज़ाइन किया गया है ताकि उपयोगकर्ताओं को अपनी व्यक्तिगत
+            प्रविष्टियों को मैन्युअल रूप से रिकॉर्ड करने और ट्रैक करने में मदद मिल सके। <strong>हम कोई बैंक, वित्तीय
+                संस्थान या सलाहकार सेवा नहीं हैं।</strong></p>
+        <div class="highlight">हम आपके किसी भी वित्तीय या व्यक्तिगत रिकॉर्ड को एकत्र, प्रसारित, संग्रहीत या साझा नहीं
+            करते हैं। आपका बहीखाता डेटा 100% स्थानीय रूप से आपके डिवाइस पर रहता है।</div>
+
+        <h2>1. डेटा संग्रह</h2>
+        <p>हमें आपको खाता बनाने की आवश्यकता नहीं है। आपके वित्तीय रिकॉर्ड विशेष रूप से आपके डिवाइस के स्थानीय स्टोरेज
+            में सहेजे जाते हैं और कभी भी हमारे सर्वर पर अपलोड नहीं किए जाते हैं。</p>
+
+        <h2>2. आवश्यक अनुमतियाँ और उपयोग</h2>
+        <ul>
+            <li><strong>स्टोरेज / फ़ाइलें:</strong> इसका उपयोग कड़ाई से आपकी पीडीएफ रिपोर्ट निर्यात करने और आपके स्थानीय
+                डाउनलोड फ़ोल्डर में आपके डेटाबेस बैकअप (.mrecb फ़ाइलें) को सहेजने या पुनर्स्थापित करने के लिए किया जाता
+                है।</li>
+            <li><strong>बायोमेट्रिक्स (FaceID/TouchID):</strong> "ऐप锁" और बैकअप प्राधिकरण सुविधाओं के लिए आपके डिवाइस के
+                ओएस द्वारा स्थानीय रूप से उपयोग किया जाता है। हम आपके बायोमेट्रिक डेटा को एक्सेस या स्टोर नहीं करते हैं।
+            </li>
+            <li><strong>संपर्क:</strong> यदि आप कस्टम "संपर्क" फ़ील्ड का उपयोग करते हैं, तो ऐप आपकी फोनबुक तक पहुंच का
+                अनुरोध केवल इसलिए करता है ताकि आप जल्दी से एक नाम चुन सकें। यह डेटा स्थानीय रूप से संसाधित होता है और
+                कभी भी किसी सर्वर पर अपलोड नहीं किया जाता है।</li>
+        </ul>
+
+        <h2>3. तृतीय-पक्ष सेवाएँ और निदान</h2>
+        <p>ऐप की स्थिरता सुनिश्चित करने और आवश्यक सूचनाएं देने के लिए, हम Firebase (Crashlytics और Cloud Messaging) का
+            उपयोग करते हैं। ये सेवाएँ स्वचालित रूप से अज्ञात नैदानिक डेटा, क्रैश लॉग और डिवाइस पहचानकर्ता एकत्र करती
+            हैं। यह डेटा कड़ाई से ऐप की कार्यक्षमता और विश्लेषण के लिए उपयोग किया जाता है, और इसे कभी भी आपकी व्यक्तिगत
+            पहचान या वित्तीय डेटा से नहीं जोड़ा जाता है।</p>
+
+        <h2>4. बैकअप और सुरक्षा</h2>
+        <p>चूंकि आपका वित्तीय डेटा ऑफ़लाइन है, इसलिए आप अपनी निर्यात की गई बैकअप फ़ाइलों को सुरक्षित रखने के लिए पूरी
+            तरह से जिम्मेदार हैं। यदि आप ऐप को हटा देते हैं या बैकअप के बिना अपना फोन खो देते हैं, तो आपका डेटा स्थायी
+            रूप से खो जाता है। हम इसे आपके लिए पुनर्प्राप्त नहीं कर सकते।</p>
+        <div class="contact-group">
+            <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">WhatsApp Me</a>
+            <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">Email Me</a>
+        </div>
+    </div>
+
+    <div id="section-ru" class="lang-section">
+        <h1>Политика конфиденциальности для MRE CashBook</h1>
+        <p><strong>Последнее обновление:</strong> Март 2026 г.</p>
+        <p>Приложение <strong>MRE CashBook</strong> было разработано командой <strong>MRE Code</strong>. Оно
+            предназначено исключительно как личный инструмент (цифровой блокнот/кассовая книга) для ручного учета и
+            отслеживания личных записей. <strong>Мы НЕ являемся банком, финансовым учреждением или консультационной
+                службой.</strong></p>
+        <div class="highlight">Мы НЕ собираем, не передаем, не храним и не передаем третьим лицам любые ваши финансовые
+            или личные записи. Данные вашей книги на 100% остаются локально на вашем устройстве.</div>
+
+        <h2>1. Сбор данных</h2>
+        <p>Мы не требуем создания учетной записи. Ваши финансовые записи сохраняются исключительно в локальном хранилище
+            вашего устройства и никогда не загружаются на наши серверы.</p>
+
+        <h2>2. Необходимые разрешения и использование</h2>
+        <ul>
+            <li><strong>Хранилище / Файлы:</strong> Используется строго для экспорта отчетов в формате PDF, а также для
+                сохранения или восстановления резервных копий базы данных (файлы .mrecb) в локальную папку «Загрузки».
+            </li>
+            <li><strong>Биометрия (FaceID/TouchID):</strong> Используется локально ОС вашего устройства для функций
+                «Блокировка приложения» и авторизации резервного копирования. Мы не получаем доступ и не храним ваши
+                биометрические данные.</li>
+            <li><strong>Контакты:</strong> Если вы используете настраиваемое поле «Контакт», приложение запрашивает
+                доступ к вашей телефонной книге исключительно для того, чтобы вы могли быстро выбрать имя. Эти данные
+                обрабатываются локально и НИКОГДА не загружаются на сервер.</li>
+        </ul>
+
+        <h2>3. Сторонние сервисы и диагностика</h2>
+        <p>Чтобы обеспечить стабильность приложения и доставлять важные уведомления, мы используем Firebase (Crashlytics
+            и Cloud Messaging). Эти сервисы автоматически собирают анонимные диагностические данные, журналы сбоев и
+            идентификаторы устройств. Эти данные используются строго для работы приложения и аналитики и никогда не
+            связываются с вашей личностью или финансовыми данными.</p>
+
+        <h2>4. Резервное копирование и безопасность</h2>
+        <p>Поскольку ваши финансовые данные находятся в автономном режиме, вы несете полную ответственность за
+            сохранность экспортированных файлов резервных копий. Если вы удалите приложение или потеряете телефон без
+            резервной копии, ваши данные будут безвозвратно утеряны. Мы не сможем восстановить их для вас.</p>
+        <div class="contact-group">
+            <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">WhatsApp Me</a>
+            <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">Email Me</a>
+        </div>
+    </div>
+
+    <div id="section-tr" class="lang-section">
+        <h1>MRE CashBook Gizlilik Politikası</h1>
+        <p><strong>Son Güncelleme:</strong> Mart 2026</p>
+        <p><strong>MRE Code</strong>, <strong>MRE CashBook</strong> uygulamasını geliştirdi. Bu uygulama, kullanıcıların
+            kişisel kayıtlarını manuel olarak tutmalarına ve takip etmelerine yardımcı olmak amacıyla yalnızca kişisel
+            bir yardımcı araç (dijital defter/hesap defteri) olarak tasarlanmıştır. <strong>Biz bir banka, finans
+                kuruluşu veya danışmanlık hizmeti DEĞİLİZ.</strong></p>
+        <div class="highlight">Mali veya kişisel kayıtlarınızın HİÇBİRİNİ toplamıyoruz, iletmiyoruz, saklamıyoruz veya
+            paylaşmıyoruz. Defter verileriniz %100 yerel olarak cihazınızda kalır.</div>
+
+        <h2>1. Veri Toplama</h2>
+        <p>Hesap oluşturmanızı gerektirmiyoruz. Mali kayıtlarınız yalnızca cihazınızın yerel depolama alanında saklanır
+            und asla sunucularımıza yüklenmez.</p>
+
+        <h2>2. Gerekli İzinler ve Kullanım</h2>
+        <ul>
+            <li><strong>Depolama / Dosyalar:</strong> Yalnızca PDF raporlarınızı dışa aktarmak ve veritabanı
+                yedeklerinizi (.mrecb dosyaları) yerel İndirilenler klasörünüze kaydetmek veya buradan geri yüklemek
+                için kullanılır.</li>
+            <li><strong>Biyometrik Veriler (FaceID/TouchID):</strong> Cihazınızın işletim sistemi tarafından yerel
+                olarak "Uygulama Kilidi" ve yedekleme yetkilendirme özellikleri için kullanılır. Biyometrik verilerinize
+                erişmeyiz ve bunları saklamayız.</li>
+            <li><strong>Kişiler:</strong> Özel "Kişi" alanını kullanırsanız uygulama, yalnızca hızlı bir şekilde isim
+                seçebilmeniz için rehberinize erişim ister. Bu veriler yerel olarak işlenir ve ASLA herhangi bir
+                sunucuya yüklenmez.</li>
+        </ul>
+
+        <h2>3. Üçüncü Taraf Hizmetleri ve Teşhis</h2>
+        <p>Uygulama kararlılığını sağlamak ve önemli bildirimler göndermek için Firebase (Crashlytics ve Cloud
+            Messaging) kullanıyoruz. Bu hizmetler anonim teşhis verilerini, kilitlenme günlüklerini ve cihaz
+            tanımlayıcılarını otomatik olarak toplar. Bu veriler kesinlikle uygulama işlevselliği ve analitiği için
+            kullanılır ve asla kişisel kimliğinizle veya mali verilerinizle ilişkilendirilmez.</p>
+
+        <h2>4. Yedeklemeler ve Güvenlik</h2>
+        <p>Mali verileriniz çevrimdışı olduğundan dışa aktarılan yedekleme dosyalarınızı güvende tutmaktan tamamen siz
+            sorumlusunuz. Uygulamayı silerseniz veya yedek almadan telefonunuzu kaybederseniz verileriniz kalıcı olarak
+            kaybolur. Bunları sizin adınıza geri getiremeyiz.</p>
+        <div class="contact-group">
+            <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">WhatsApp Me</a>
+            <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">Email Me</a>
+        </div>
+    </div>
+
+    <div id="section-zh" class="lang-section">
+        <h1>MRE CashBook 隐私政策</h1>
+        <p><strong>最后更新：</strong> 2026年3月</p>
+        <p><strong>MRE Code</strong> 开发了 <strong>MRE CashBook</strong> 应用。它仅设计为个人实用工具（数字笔记本/账本），旨在帮助用户手动记录和跟踪其个人条目。
+            <strong>我们不是银行、金融机构或顾问服务。</strong></p>
+        <div class="highlight">我们不会收集、传输、存储或共享您的任何财务或个人记录。您的账本数据 100% 完全保留在您的本地设备上。</div>
+
+        <h2>1. 数据收集</h2>
+        <p>我们不需要您创建账户。您的财务记录完全保存在您设备的本地存储中，绝不会上传到我们的服务器。</p>
+
+        <h2>2. 所需权限与使用</h2>
+        <ul>
+            <li><strong>存储 / 文件:</strong> 严格用于导出您的 PDF 报告，以及在本地“下载”文件夹中保存或恢复您的数据库备份（.mrecb 文件）。</li>
+            <li><strong>生物识别 (FaceID/TouchID):</strong> 由您设备的操作系统在本地用于“应用锁”和备份授权功能。我们不会访问或存储您的生物识别数据。</li>
+            <li><strong>联系人:</strong> 如果您使用自定义的“联系人”字段，该应用会请求访问您的电话簿，仅为了让您能够快速选择姓名。此数据在本地处理，绝不会上传到任何服务器。</li>
+        </ul>
+
+        <h2>3. 第三方服务与诊断</h2>
+        <p>为了确保应用稳定性并发送必要通知，我们使用 Firebase（Crashlytics 和 Cloud
+            Messaging）。这些服务会自动收集匿名的诊断数据、崩溃日志和设备标识符。这些数据严格用于应用功能和分析，绝不会与您的个人身份或财务数据关联。</p>
+
+        <h2>4. 备份与安全</h2>
+        <p>由于您的财务数据处于离线状态，您完全负责妥善保管导出的备份文件。如果您删除了应用或在没有备份的情况下丢失了手机，您的数据将永久丢失。我们无法为您恢复。</p>
+        <div class="contact-group">
+            <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">WhatsApp 联系我</a>
+            <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">发送邮件</a>
+        </div>
+    </div>
+
+    <script>
+        const ua = navigator.userAgent;
+        const isApp = ua.includes("MRECashBookApp");
+        const supportedLangs = ['ar', 'de', 'en', 'es', 'fr', 'hi', 'ru', 'tr', 'zh'];
+
+        let sysLang = navigator.language || navigator.userLanguage;
+        let currentLang = 'en';
+
+        // تحديد اللغة الافتراضية بناء على لغة النظام اذا كانت مدعومة
+        const shortLang = sysLang.substring(0, 2).toLowerCase();
+        if (supportedLangs.includes(shortLang)) {
+            currentLang = shortLang;
+        }
+
+        let currentTheme = 'light';
+
+        if (!isApp) {
+            // فحص البرامترز في الرابط مثل ?lang=ar&theme=dark
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlLang = urlParams.get('lang');
+            const urlTheme = urlParams.get('theme');
+
+            if (urlLang && supportedLangs.includes(urlLang)) {
+                currentLang = urlLang;
+            } else {
+                const savedLang = localStorage.getItem('mre_lang');
+                if (savedLang && supportedLangs.includes(savedLang)) currentLang = savedLang;
+            }
+
+            if (urlTheme === 'dark') {
+                currentTheme = 'dark';
+            } else if (urlTheme === 'light') {
+                currentTheme = 'light';
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                currentTheme = 'dark'; // الوضع الليلي التلقائي للمتصفح
+            }
+        }
+
+        if (isApp) {
+            document.getElementById('top-controls').style.display = 'none';
+
+            // فحص كود اللغة الممرر في User Agent بشكل ديناميكي لجميع اللغات المدعومة
+            const langMatch = ua.match(/lang=([a-z]{2})/);
+            if (langMatch && supportedLangs.includes(langMatch[1])) {
+                currentLang = langMatch[1];
+            }
+
+            if (ua.includes("theme=dark")) currentTheme = 'dark';
+            else if (ua.includes("theme=light")) currentTheme = 'light';
+        }
+
+        function applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            currentTheme = theme;
+        }
+
+        function applyLang(lang) {
+            currentLang = lang;
+            const isAr = lang === 'ar';
+
+            // ضبط الاتجاه واللغة لجذر المستند
+            document.documentElement.dir = isAr ? 'rtl' : 'ltr';
+            document.documentElement.lang = lang;
+
+            // عرض القسم المطلوب واخفاء الباقي
+            supportedLangs.forEach(l => {
+                const section = document.getElementById(`section-${l}`);
+                if (section) {
+                    section.style.display = (l === lang) ? 'block' : 'none';
+                }
+            });
+
+            if (!isApp) localStorage.setItem('mre_lang', lang);
+            
+            const selectElem = document.getElementById('lang-select');
+            if (selectElem) selectElem.value = lang;
+        }
+
+        function changeLang(val) {
+            if (supportedLangs.includes(val)) {
+                applyLang(val);
+            }
+        }
+
+        applyTheme(currentTheme);
+        applyLang(currentLang);
+    </script>
+</body>
+
+</html>
