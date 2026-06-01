@@ -587,6 +587,10 @@
 
         if (isApp) {
             document.getElementById('top-controls').style.display = 'none';
+            
+            // إخفاء الصورة (اللوجو) عند العرض داخل التطبيق
+            const logos = document.querySelectorAll('.app-logo');
+            logos.forEach(l => l.style.display = 'none');
 
             // فحص كود اللغة الممرر في User Agent بشكل ديناميكي لجميع اللغات المدعومة
             const langMatch = ua.match(/lang=([a-z]{2})/);
