@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRE CashBook</title>
+    <style>
+        /* الوان التطبيق - اللايت مود */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #2D2F33;
+            --p-color: #55575A;
+            --heading-color: #005F73;
+            --border-color: #2A9D8F;
+            --highlight-bg: #E8F5E9;
+            --highlight-text: #005F73;
+            --highlight-border: #E76F51;
+            --btn-bg: #005F73;
+            --btn-text: #ffffff;
+            --btn-email-bg: #2A9D8F;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 15px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            h1 { font-size: 22px; }
+            h2 { font-size: 18px; }
+            p, li { font-size: 14px; }
+        }
+
+        h1, h2 {
+            color: var(--heading-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 20px;
+        }
+
+        p, li {
+            font-size: 15px;
+            color: var(--p-color);
+        }
+
+        .highlight-box {
+            background-color: var(--highlight-bg);
+            padding: 20px;
+            border-left: 5px solid var(--highlight-border);
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .highlight-box h3 {
+            color: var(--highlight-text);
+            margin-top: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .app-logo {
+            display: block;
+            width: 120px;
+            height: 120px;
+            margin: 20px auto;
+            border-radius: 24px;
+            object-fit: contain;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .header-title {
+            text-align: center;
+            border: none;
+            font-size: 32px;
+            margin-bottom: 5px;
+            padding-bottom: 0;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--border-color);
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 14px;
+            color: #888;
+        }
+        
+        .links {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .links a {
+            color: var(--heading-color);
+            font-weight: bold;
+            text-decoration: none;
+            margin: 0 15px;
+            display: inline-block;
+        }
+        
+        .links a:hover {
+            text-decoration: underline;
+            color: var(--border-color);
+        }
+    </style>
+    <link rel="icon" href="mre_cashbook_icon.png" type="image/png">
+    <meta name="google-site-verification" content="KlU8ZllqOiEbjvtepr2A4yY1XiAnZqVeFLklkZ0ANpI" />
+</head>
+
+<body>
+
+    <img src="mre_cashbook_icon.png" alt="MRE CashBook Logo" class="app-logo" onerror="this.style.display='none'">
+    
+    <!-- EXACT MATCH REQUIRED BY GOOGLE -->
+    <h1 class="header-title">MRE CashBook</h1>
+    <p class="subtitle">Secure, Offline-First Personal Finance Tracker</p>
+
+    <div class="container">
+        <h2>About the App (Application Purpose)</h2>
+        <p>
+            <strong>MRE CashBook</strong> is a comprehensive digital ledger and personal finance application designed for individuals and small business owners. Its primary purpose is to help users manually record and manage their daily cash flow, track debts (creditors and debtors), and monitor product inventory—all directly from their mobile devices.
+        </p>
+        
+        <h3>Key Features</h3>
+        <ul>
+            <li><strong>Complete Offline Privacy:</strong> By default, your data never leaves your phone. It is stored 100% locally.</li>
+            <li><strong>Smart Ledger:</strong> Manage standard cash flow, detailed debt tracking, and product inventory all in one place.</li>
+            <li><strong>Professional Reports:</strong> Generate comprehensive PDF receipts and reports.</li>
+            <li><strong>Biometric Security:</strong> Lock your financial data behind device-level security (FaceID/TouchID).</li>
+        </ul>
+
+        <div class="highlight-box">
+            <h3>Google Drive Integration (OAuth Scope Usage)</h3>
+            <p>
+                To protect users from losing their financial data if their device is lost or broken, MRE CashBook offers an optional <strong>Cloud Backup & Sync</strong> feature.
+            </p>
+            <p>
+                If enabled by the user, the app requests access to the <strong>Google Drive AppData folder</strong> (<code>https://www.googleapis.com/auth/drive.appdata</code>).
+            </p>
+            <p>
+                <strong>How we use this scope:</strong> We use this highly restricted scope exclusively to securely upload an encrypted backup of your local database to a hidden, dedicated folder in your personal Google Drive. This ensures data recovery across your devices while keeping the backup file invisible to other apps. We do not have centralized servers, and we never access, read, or share your Google Drive data.
+            </p>
+        </div>
+
+        <div class="links">
+            <!-- Link to your existing Privacy Policy file -->
+            <a href="index.html">Privacy Policy</a>
+            <a href="mailto:mrecode.net@gmail.com">Contact Support</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2026 MRE Code. All rights reserved.
+    </div>
+
+</body>
+</html>
