@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html-root">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +20,21 @@
             --btn-email-bg: #2A9D8F;
         }
 
+        /* الوان التطبيق - الدارك مود (يعمل داخل التطبيق فقط) */
+        [data-theme="dark"] {
+            --bg-color: transparent;
+            --text-color: #FFFFFF;
+            --p-color: #B3B3B3;
+            --heading-color: #0A9396;
+            --border-color: #3EC9B8;
+            --highlight-bg: rgba(62, 201, 184, 0.1);
+            --highlight-text: #3EC9B8;
+            --highlight-border: #F28B70;
+            --btn-bg: #0A9396;
+            --btn-text: #ffffff;
+            --btn-email-bg: #3EC9B8;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -28,6 +43,7 @@
             margin: 0 auto;
             max-width: 800px;
             padding: 15px;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         @media (max-width: 600px) {
@@ -173,5 +189,28 @@
         &copy; 2026 MRE Code. All rights reserved.
     </div>
 
+
+    <script>
+        const ua = navigator.userAgent;
+        const isApp = ua.includes("MRECashBookApp");
+        let currentTheme = 'light';
+
+        if (!isApp) {
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlTheme = urlParams.get('theme');
+            if (urlTheme === 'dark') {
+                currentTheme = 'dark';
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                currentTheme = 'dark';
+            }
+        } else {
+            if (ua.includes("theme=dark")) currentTheme = 'dark';
+            
+            const logos = document.querySelectorAll('.app-logo');
+            logos.forEach(l => l.style.display = 'none');
+        }
+
+        document.documentElement.setAttribute('data-theme', currentTheme);
+    </script>
 </body>
 </html>

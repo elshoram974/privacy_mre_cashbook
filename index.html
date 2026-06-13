@@ -204,13 +204,10 @@
         </ul>
 
         <h2>3. خدمات الطرف الثالث والتشخيص</h2>
-        <p>لضمان استقرار التطبيق وإرسال الإشعارات الضرورية، نستخدم خدمات Firebase (مثل Crashlytics و Cloud Messaging).
-            تقوم هذه الخدمات بجمع بيانات تشخيصية وسجلات أعطال ومعرفات أجهزة بشكل آلي ومجهول المصدر. تستخدم هذه البيانات
-            حصريا لتحسين أداء التطبيق ولا يتم ربطها أبدا بهويتك الشخصية أو سجلاتك المالية.</p>
+        <p>لضمان استقرار التطبيق وإرسال الإشعارات الضرورية، نستخدم خدمات مثل Firebase Crashlytics و OneSignal. تقوم هذه الخدمات بجمع بيانات تشخيصية وسجلات أعطال ومعرفات أجهزة بشكل آلي ومجهول المصدر لمساعدتنا في تتبع وإصلاح مشكلات التطبيق وإرسال تذكيرات هامة (مثل موعد النسخ الاحتياطي). تستخدم هذه البيانات حصريا لتحسين الأداء ولا يتم ربطها أبدا بهويتك الشخصية أو سجلاتك المالية.</p>
 
-        <h2>4. الأمان والنسخ الاحتياطي</h2>
-        <p>نظرا لأن بياناتك غير متصلة بالإنترنت، فأنت المسؤول الوحيد عن حفظ ملفات النسخ الاحتياطي الخاصة بك في مكان آمن.
-            إذا قمت بحذف التطبيق دون أخذ نسخة احتياطية، فستفقد بياناتك نهائيا ولا يمكننا استعادتها لك.</p>
+        <h2>4. المزامنة السحابية والنسخ الاحتياطي</h2>
+        <p>بياناتك المالية غير متصلة بالإنترنت تماماً بشكل افتراضي. إذا اخترت تفعيل ميزة "المزامنة السحابية"، يتم رفع ملفات النسخ الاحتياطي المشفرة مباشرة وبشكل آمن إلى <strong>حساب Google Drive الشخصي الخاص بك</strong>. نحن لا نملك أي وصول إلى حساب جوجل درايف الخاص بك، أو لملفات النسخ الاحتياطي، أو لأي من بيانات قيودك. التطبيق يظل قادراً على العمل بكامل وظائفه تماماً بدون إنترنت.</p>
         <div class="contact-group">
             <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">تواصل معي عبر واتساب</a>
             <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">راسلني عبر الإيميل</a>
@@ -245,15 +242,10 @@
         </ul>
 
         <h2>3. Drittanbieter-Dienste & Diagnose</h2>
-        <p>Um die Stabilität der App zu gewährleisten und wichtige Benachrichtigungen bereitzustellen, verwenden wir
-            Firebase (Crashlytics und Cloud Messaging). Diese Dienste erfassen automatisch anonyme Diagnosedaten,
-            Absturzprotokolle und Geräte-IDs. Diese Daten werden ausschließlich für die App-Funktionalität und Analysen
-            verwendet und sind niemals mit Ihrer persönlichen Identität oder Ihren Finanzdaten verknüpft.</p>
+        <p>Um die Stabilität der App zu gewährleisten und wichtige Benachrichtigungen bereitzustellen, verwenden wir Drittanbieter-Dienste wie Firebase Crashlytics und OneSignal. Diese Dienste erfassen automatisch anonyme Diagnosedaten, Absturzprotokolle und Geräte-IDs, um uns dabei zu helfen, App-Probleme zu beheben und wichtige Erinnerungen (z.B. für Backups) zu senden. Diese Daten werden ausschließlich für die App-Funktionalität verwendet und sind niemals mit Ihrer persönlichen Identität oder Ihren Finanzdaten verknüpft.</p>
 
-        <h2>4. Backups & Sicherheit</h2>
-        <p>Da Ihre Finanzdaten offline sind, sind Sie allein dafür verantwortlich, Ihre exportierten Backup-Dateien
-            sicher aufzubewahren. Wenn Sie die App löschen oder Ihr Telefon ohne Backup verlieren, gehen Ihre Daten
-            dauerhaft verloren. Wir können sie nicht für Sie wiederherstellen.</p>
+        <h2>4. Cloud-Synchronisierung & Backups</h2>
+        <p>Ihre Finanzdaten sind standardmäßig komplett offline. Wenn Sie die Cloud-Synchronisierung aktivieren, werden Ihre verschlüsselten Backup-Dateien direkt und sicher in <strong>Ihr persönliches Google Drive-Konto</strong> hochgeladen. Wir haben KEINEN Zugriff auf Ihr Google Drive, Ihre Backup-Dateien oder Ihre Hauptbuchdaten. Die App bleibt auch ohne Internetverbindung vollständig funktionsfähig.</p>
         <div class="contact-group">
             <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">WhatsApp Me</a>
             <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">Email Me</a>
@@ -285,15 +277,10 @@
         </ul>
 
         <h2>3. Third-Party Services & Diagnostics</h2>
-        <p>To ensure app stability and deliver essential notifications, we use Firebase (Crashlytics and Cloud
-            Messaging). These services automatically collect anonymous diagnostic data, crash logs, and device
-            identifiers. This data is strictly used for app functionality and analytics, and is <strong>never</strong>
-            linked to your personal identity or financial data.</p>
+        <p>To ensure app stability and deliver essential notifications, we use third-party services like Firebase Crashlytics and OneSignal. These services collect anonymous diagnostic data, crash logs, and device identifiers strictly to help us track and fix app issues and send important reminders (e.g., backup due). This data is used solely for app functionality and is <strong>never</strong> linked to your personal identity or financial records.</p>
 
-        <h2>4. Backups & Security</h2>
-        <p>Because your financial data is offline, you are entirely responsible for keeping your exported backup files
-            safe. If you delete the app or lose your phone without a backup, your data is permanently lost. We cannot
-            recover it for you.</p>
+        <h2>4. Cloud Sync & Backups</h2>
+        <p>Your financial data is completely offline by default. If you choose to enable the Cloud Sync feature, your encrypted backup files are uploaded directly and securely to <strong>your personal Google Drive account</strong>. We do NOT have access to your Google Drive, your backup files, or any of your ledger data. The app remains fully functional completely offline without internet access.</p>
         <div class="contact-group">
             <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">WhatsApp Me</a>
             <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">Email Me</a>
@@ -329,16 +316,10 @@
         </ul>
 
         <h2>3. Servicios de terceros y diagnóstico</h2>
-        <p>Para garantizar la estabilidad de la aplicación y enviar notificaciones esenciales, utilizamos Firebase
-            (Crashlytics y Cloud Messaging). Estos servicios recopilan automáticamente datos de diagnóstico anónimos,
-            registros de fallos e identificadores de dispositivos. Estos datos se utilizan estrictamente para el
-            funcionamiento y análisis de la aplicación, y nunca se vinculan con su identidad personal o datos
-            financieros.</p>
+        <p>Para garantizar la estabilidad de la aplicación y enviar notificaciones esenciales, utilizamos servicios de terceros como Firebase Crashlytics y OneSignal. Estos servicios recopilan datos de diagnóstico anónimos, registros de fallos e identificadores de dispositivos estrictamente para ayudarnos a rastrear y solucionar problemas de la aplicación y enviar recordatorios importantes (por ejemplo, copia de seguridad pendiente). Estos datos se utilizan únicamente para el funcionamiento de la aplicación y nunca se vinculan con su identidad personal o registros financieros.</p>
 
-        <h2>4. Copias de seguridad y seguridad</h2>
-        <p>Debido a que sus datos financieros están fuera de línea, usted es el único responsable de mantener a salvo
-            sus archivos de copia de seguridad exportados. Si elimina la aplicación o pierde su teléfono sin una copia
-            de seguridad, sus datos se perderán permanentemente. No podemos recuperarlos por usted.</p>
+        <h2>4. Sincronización en la nube y copias de seguridad</h2>
+        <p>Sus datos financieros están completamente fuera de línea de forma predeterminada. Si elige habilitar la función de sincronización en la nube, sus archivos de copia de seguridad encriptados se cargarán directa y de forma segura en <strong>su cuenta personal de Google Drive</strong>. NO tenemos acceso a su Google Drive, a sus archivos de copia de seguridad ni a ninguno de los datos de su libro mayor. La aplicación sigue siendo completamente funcional fuera de línea sin acceso a Internet.</p>
         <div class="contact-group">
             <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">WhatsApp Me</a>
             <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">Email Me</a>
@@ -374,16 +355,10 @@
         </ul>
 
         <h2>3. Services tiers et diagnostics</h2>
-        <p>Pour garantir la stabilité de l'application et fournir des notifications essentielles, nous utilisons
-            Firebase (Crashlytics et Cloud Messaging). Ces services collectent automatiquement des données de diagnostic
-            anonymes, des journaux de plantage et des identifiants d'appareils. Ces données sont strictement utilisées
-            pour le fonctionnement et l'analyse de l'application, et ne sont jamais liées à votre identité personnelle
-            ou à vos données financières.</p>
+        <p>Pour garantir la stabilité de l'application et fournir des notifications essentielles, nous utilisons des services tiers tels que Firebase Crashlytics et OneSignal. Ces services collectent des données de diagnostic anonymes, des journaux de plantage et des identifiants d'appareils strictement pour nous aider à suivre et corriger les problèmes de l'application et envoyer des rappels importants (ex: sauvegarde prévue). Ces données sont utilisées uniquement pour le fonctionnement de l'application et ne sont jamais liées à votre identité personnelle ou à vos données financières.</p>
 
-        <h2>4. Sauvegardes et sécurité</h2>
-        <p>Étant donné que vos données financières sont hors ligne, vous êtes entièrement responsable de la sécurité de
-            vos fichiers de sauvegarde exportés. Si vous supprimez l'application ou perdez votre téléphone sans
-            sauvegarde, vos données sont définitivement perdues. Nous ne pouvons pas les récupérer pour vous.</p>
+        <h2>4. Synchronisation Cloud et sauvegardes</h2>
+        <p>Vos données financières sont complètement hors ligne par défaut. Si vous choisissez d'activer la fonction de synchronisation Cloud, vos fichiers de sauvegarde cryptés sont téléchargés directement et en toute sécurité sur <strong>votre compte Google Drive personnel</strong>. Nous n'avons AUCUN accès à votre Google Drive, à vos fichiers de sauvegarde ou à vos données financières. L'application reste entièrement fonctionnelle complètement hors ligne sans accès à Internet.</p>
         <div class="contact-group">
             <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">WhatsApp Me</a>
             <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">Email Me</a>
@@ -418,15 +393,10 @@
         </ul>
 
         <h2>3. तृतीय-पक्ष सेवाएँ और निदान</h2>
-        <p>ऐप की स्थिरता सुनिश्चित करने और आवश्यक सूचनाएं देने के लिए, हम Firebase (Crashlytics और Cloud Messaging) का
-            उपयोग करते हैं। ये सेवाएँ स्वचालित रूप से अज्ञात नैदानिक डेटा, क्रैश लॉग और डिवाइस पहचानकर्ता एकत्र करती
-            हैं। यह डेटा कड़ाई से ऐप की कार्यक्षमता और विश्लेषण के लिए उपयोग किया जाता है, और इसे कभी भी आपकी व्यक्तिगत
-            पहचान या वित्तीय डेटा से नहीं जोड़ा जाता है।</p>
+        <p>ऐप की स्थिरता सुनिश्चित करने और आवश्यक सूचनाएं देने के लिए, हम Firebase Crashlytics और OneSignal जैसी तृतीय-पक्ष सेवाओं का उपयोग करते हैं। ये सेवाएँ गुमनाम नैदानिक डेटा, क्रैश लॉग और डिवाइस पहचानकर्ता एकत्र करती हैं ताकि हमें ऐप की समस्याओं को ट्रैक करने और ठीक करने और महत्वपूर्ण अनुस्मारक (जैसे, बैकअप देय) भेजने में मदद मिल सके। यह डेटा कड़ाई से ऐप की कार्यक्षमता के लिए उपयोग किया जाता है और इसे कभी भी आपकी व्यक्तिगत पहचान या वित्तीय रिकॉर्ड से नहीं जोड़ा जाता है。</p>
 
-        <h2>4. बैकअप और सुरक्षा</h2>
-        <p>चूंकि आपका वित्तीय डेटा ऑफ़लाइन है, इसलिए आप अपनी निर्यात की गई बैकअप फ़ाइलों को सुरक्षित रखने के लिए पूरी
-            तरह से जिम्मेदार हैं। यदि आप ऐप को हटा देते हैं या बैकअप के बिना अपना फोन खो देते हैं, तो आपका डेटा स्थायी
-            रूप से खो जाता है। हम इसे आपके लिए पुनर्प्राप्त नहीं कर सकते।</p>
+        <h2>4. क्लाउड सिंक और बैकअप</h2>
+        <p>आपका वित्तीय डेटा डिफ़ॉल्ट रूप से पूरी तरह से ऑफ़लाइन है। यदि आप क्लाउड सिंक सुविधा को सक्षम करना चुनते हैं, तो आपकी एन्क्रिप्टेड बैकअप फ़ाइलें सीधे और सुरक्षित रूप से <strong>आपके व्यक्तिगत Google Drive खाते</strong> पर अपलोड की जाती हैं। हमारे पास आपके Google Drive, आपकी बैकअप फ़ाइलों या आपके किसी भी बहीखाता डेटा तक पहुंच नहीं है। ऐप बिना इंटरनेट एक्सेस के पूरी तरह से ऑफ़लाइन काम करता है।</p>
         <div class="contact-group">
             <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">WhatsApp Me</a>
             <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">Email Me</a>
@@ -461,15 +431,10 @@
         </ul>
 
         <h2>3. Сторонние сервисы и диагностика</h2>
-        <p>Чтобы обеспечить стабильность приложения и доставлять важные уведомления, мы используем Firebase (Crashlytics
-            и Cloud Messaging). Эти сервисы автоматически собирают анонимные диагностические данные, журналы сбоев и
-            идентификаторы устройств. Эти данные используются строго для работы приложения и аналитики и никогда не
-            связываются с вашей личностью или финансовыми данными.</p>
+        <p>Чтобы обеспечить стабильность приложения и доставлять важные уведомления, мы используем сторонние сервисы, такие как Firebase Crashlytics и OneSignal. Эти сервисы собирают анонимные диагностические данные, журналы сбоев и идентификаторы устройств строго для того, чтобы помочь нам отслеживать и исправлять проблемы в приложении, а также отправлять важные напоминания (например, о резервном копировании). Эти данные используются исключительно для работы приложения и никогда не связываются с вашей личностью или финансовыми данными.</p>
 
-        <h2>4. Резервное копирование и безопасность</h2>
-        <p>Поскольку ваши финансовые данные находятся в автономном режиме, вы несете полную ответственность за
-            сохранность экспортированных файлов резервных копий. Если вы удалите приложение или потеряете телефон без
-            резервной копии, ваши данные будут безвозвратно утеряны. Мы не сможем восстановить их для вас.</p>
+        <h2>4. Облачная синхронизация и резервное копирование</h2>
+        <p>Ваши финансовые данные по умолчанию полностью находятся в автономном режиме. Если вы решите включить функцию облачной синхронизации, ваши зашифрованные файлы резервных копий будут загружаться напрямую и безопасно в <strong>ваш личный аккаунт Google Диск</strong>. У нас НЕТ доступа к вашему Google Диску, вашим файлам резервных копий или любым данным вашей книги. Приложение остается полностью функциональным в автономном режиме без доступа к Интернету.</p>
         <div class="contact-group">
             <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">WhatsApp Me</a>
             <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">Email Me</a>
@@ -504,15 +469,10 @@
         </ul>
 
         <h2>3. Üçüncü Taraf Hizmetleri ve Teşhis</h2>
-        <p>Uygulama kararlılığını sağlamak ve önemli bildirimler göndermek için Firebase (Crashlytics ve Cloud
-            Messaging) kullanıyoruz. Bu hizmetler anonim teşhis verilerini, kilitlenme günlüklerini ve cihaz
-            tanımlayıcılarını otomatik olarak toplar. Bu veriler kesinlikle uygulama işlevselliği ve analitiği için
-            kullanılır ve asla kişisel kimliğinizle veya mali verilerinizle ilişkilendirilmez.</p>
+        <p>Uygulama kararlılığını sağlamak ve önemli bildirimler göndermek için Firebase Crashlytics ve OneSignal gibi üçüncü taraf hizmetleri kullanıyoruz. Bu hizmetler, uygulama sorunlarını izlememize ve düzeltmemize ve önemli hatırlatıcılar (ör. yedekleme zamanı) göndermemize yardımcı olmak için kesinlikle anonim teşhis verilerini, kilitlenme günlüklerini ve cihaz tanımlayıcılarını toplar. Bu veriler yalnızca uygulama işlevselliği için kullanılır ve asla kişisel kimliğinizle veya mali verilerinizle ilişkilendirilmez.</p>
 
-        <h2>4. Yedeklemeler ve Güvenlik</h2>
-        <p>Mali verileriniz çevrimdışı olduğundan dışa aktarılan yedekleme dosyalarınızı güvende tutmaktan tamamen siz
-            sorumlusunuz. Uygulamayı silerseniz veya yedek almadan telefonunuzu kaybederseniz verileriniz kalıcı olarak
-            kaybolur. Bunları sizin adınıza geri getiremeyiz.</p>
+        <h2>4. Bulut Senkronizasyonu ve Yedeklemeler</h2>
+        <p>Mali verileriniz varsayılan olarak tamamen çevrimdışıdır. Bulut Senkronizasyonu özelliğini etkinleştirmeyi seçerseniz, şifrelenmiş yedekleme dosyalarınız doğrudan ve güvenli bir şekilde <strong>kendi kişisel Google Drive hesabınıza</strong> yüklenir. Google Drive'ınıza, yedekleme dosyalarınıza veya defter verilerinizden hiçbirine erişimimiz YOKTUR. Uygulama internet erişimi olmadan tamamen çevrimdışı olarak tam işlevsel kalır.</p>
         <div class="contact-group">
             <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">WhatsApp Me</a>
             <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">Email Me</a>
@@ -537,11 +497,10 @@
         </ul>
 
         <h2>3. 第三方服务与诊断</h2>
-        <p>为了确保应用稳定性并发送必要通知，我们使用 Firebase（Crashlytics 和 Cloud
-            Messaging）。这些服务会自动收集匿名的诊断数据、崩溃日志和设备标识符。这些数据严格用于应用功能和分析，绝不会与您的个人身份或财务数据关联。</p>
+        <p>为了确保应用稳定性并发送必要通知，我们使用 Firebase Crashlytics 和 OneSignal 等第三方服务。这些服务会收集匿名的诊断数据、崩溃日志和设备标识符，严格用于帮助我们跟踪和修复应用问题并发送重要提醒（如备份到期）。这些数据仅用于应用功能，绝不会与您的个人身份或财务记录关联。</p>
 
-        <h2>4. 备份与安全</h2>
-        <p>由于您的财务数据处于离线状态，您完全负责妥善保管导出的备份文件。如果您删除了应用或在没有备份的情况下丢失了手机，您的数据将永久丢失。我们无法为您恢复。</p>
+        <h2>4. 云同步与备份</h2>
+        <p>默认情况下，您的财务数据是完全离线的。如果您选择启用云同步功能，您的加密备份文件将直接且安全地上传到<strong>您的个人 Google Drive 帐户</strong>。我们无法访问您的 Google Drive、您的备份文件或您的任何账本数据。该应用程序在没有互联网访问的情况下完全离线保持全部功能。</p>
         <div class="contact-group">
             <a href="https://wa.me/201553668845" class="contact-btn" target="_blank">WhatsApp 联系我</a>
             <a href="mailto:mrecode24@gmail.com" class="contact-btn email" target="_blank">发送邮件</a>
